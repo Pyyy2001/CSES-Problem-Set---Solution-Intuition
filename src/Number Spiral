@@ -1,0 +1,8 @@
+Q：一个诡异的填数找规律
+A：可以分为1、234、56789
+
+gets
+$<.map do |x|
+  l=(a,b=x.split.map &:to_i).max;
+p l*l-l+1+(l%2<1?a-b:b-a)
+end
