@@ -1,0 +1,7 @@
+Q：用1~n 构造一个相邻两数之差不为1的数列
+A：千山鸟飞绝，万径人踪灭，一三五七九，二四六八十。
+
+n = gets.to_i
+puts 1 < n && n < 4 ? "NO SOLUTION" :
+       ([*(1..n)].select(&:odd?) + [*(1..n)].select(&:even?) )*?\s
+
