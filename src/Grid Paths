@@ -1,0 +1,24 @@
+Q：走遍所有格子到达指定格子，问你有多少种走法？
+A：Guide to Competitive Programming 2nd edition 第287页详细描述了backtracking和prune的细节
+不过这里书上的例题是从（1，1）走到（7，7）
+
+Optimization 1 In any solution, we ﬁrst move one step down or right, 
+and there are two paths that are symmetric about the diagonal of the grid.
+For example, the paths in Fig.15.28 are symmetric.
+Hence, we can decide that we always ﬁrst move one step down (or right) and ﬁnally multiply the number of solutions by two.
+
+Optimization 2 If the path reaches the lower-right square before visiting all other squares of the grid, 
+it will clearly not be possible to complete the solution. An example of this is shown in Fig.15.29. 
+Using this observation, we can terminate the search immediately if we reach the lower-right square too early.
+
+Optimization 3 If the path touches a wall and can turn either left or right,
+the grid splits into two parts that contain unvisited squares. For example, 
+the path in Fig.15.30 can turn either left or right. In this case, we cannot visit all squares anymore,
+so we can terminate the search. This optimization is very useful:
+
+Optimization 4 The idea of the previous optimization can be generalized:
+If the path cannot continue forward but can turn either left or right,
+the grid splits into two parts that both contain unvisited squares. 
+Figure15.31 shows an example of such a case. 
+It is clear that we cannot visit all squares anymore, 
+so we can terminate the search. After this optimization, the search is very efﬁcient:
