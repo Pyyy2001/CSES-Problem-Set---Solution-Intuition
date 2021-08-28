@@ -1,0 +1,15 @@
+Q：给你一个字符串，问你某字母连续出现最多的次数是多少
+A：统计呗
+
+s=gets
+a=[]
+q=1
+for i in 0...s.length do
+  if s[i]==s[i+1] then
+    q+=1
+  else
+    q=1
+  end
+  a << q
+end
+p a.max
