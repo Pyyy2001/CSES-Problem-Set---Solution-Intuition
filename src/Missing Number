@@ -1,6 +1,6 @@
-Q：在1~n里选n-1个不同的数给你，问你缺少的是哪一个
-A：你可以把输入的每个数都标记一下，最后遍历一遍谁没被标记
-也可以用 n * (n+1) / 2  减去  输入进来的所有数之和
+Q：give you n-1 different numbers from 1 to n, ask which one is missing
+A：you can mark every number that input to check, then sweep the whole array to find out
+also you can use 1+2+3+..+n substract the sum of input numbers
 
 n = gets.to_i
 p n*(n+1)/2 - gets.split.map(&:to_i).sum
