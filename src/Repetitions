@@ -1,5 +1,5 @@
-Q：给你一个字符串，问你某字母连续出现最多的次数是多少
-A：统计呗
+Q：give you a string, ask which letter is the longest repetition in the sequence
+A：just count by comparing s[i] and s[i+1]
 
 s=gets
 a=[]
