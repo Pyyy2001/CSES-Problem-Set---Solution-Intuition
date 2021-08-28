@@ -1,5 +1,5 @@
-Q：给你一个数按照奇偶不断修改自己的值直到变为1，把变换过程的值打出来
-A：白给
+Q：change its value by 2 different ways untill it become 1
+A：while-loop is good
 
 Ruby:
 n = gets.to_i;
