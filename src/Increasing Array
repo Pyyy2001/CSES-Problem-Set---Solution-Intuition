@@ -1,0 +1,12 @@
+Q：给你一列数，你可以做的是给某个数+1，问你最少多少次可以把这列数变成非递减数列
+A：从第二个数开始算需不需要加，需要加多少，直到n
+
+n = gets.to_i
+a = gets.split.map(&:to_i)
+s = 0
+for i in 1...n do
+  x = [a[i], a[i-1]].max - a[i]
+	s += x
+  a[i] += x
+end
+p s
